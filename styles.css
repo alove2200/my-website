@@ -1,0 +1,125 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --accent: #c2410c;
+  --alt-bg: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+              url("https://images.unsplash.com/photo-1504754524776-8f4f37790ca0");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 6rem 1.5rem;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section.alt {
+  background: var(--alt-bg);
+}
+
+.section h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Menu */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+  color: var(--muted);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
