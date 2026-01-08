@@ -108,6 +108,22 @@ nav a:hover {
   border: 2px solid var(--green);
 }
 
+.catering-link {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.catering-link a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.catering-link a:hover {
+  opacity: 0.8;
+}
+
 
 /* Footer */
 .site-footer {
