@@ -89,6 +89,16 @@ nav a:hover {
   color: var(--green);
 }
 
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: var(--green);
+  margin: 4rem auto;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+
 /* Menu */
 .menu-grid {
   display: grid;
