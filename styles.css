@@ -1,16 +1,26 @@
+/* =========================================
+   MILLY'S BAGELS â€” styles.css
+   ========================================= */
+
 :root {
-  --green: #0b4f2c; /* matched to logo */
+  --green: #0b4f2c;
   --cream: #faf7f2;
+  --alt-bg: #f1ece4;
   --text: #2b2b2b;
   --muted: #6b6b6b;
+  --border: #d6cfc5;
 }
 
-* {
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ---- Base ---- */
 body {
   font-family: "Libre Baskerville", serif;
   color: var(--text);
@@ -24,18 +34,16 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Header */
-.site-header {
-  background: var(--cream);
-  border-bottom: 2px solid var(--green);
-}
+/* =========================================
+   HEADER
+   ========================================= */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #fff;
+  background: var(--cream);
+  border-bottom: 2px solid var(--green);
 }
-
 
 .header-inner {
   display: flex;
@@ -48,122 +56,231 @@ body {
   height: 48px;
 }
 
+/* Desktop nav */
 nav a {
   margin-left: 1.5rem;
   text-decoration: none;
   color: var(--green);
   font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: opacity 0.2s;
 }
 
 nav a:hover {
   text-decoration: underline;
+  opacity: 0.75;
 }
 
-/* Hero */
+/* Hamburger button â€” hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--green);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animate to âœ• when open */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================
+   HERO
+   ========================================= */
 .hero {
   background:
-    linear-gradient(rgba(11,79,44,.75), rgba(11,79,44,.75)),
-    url("images/millys-bagels-photo.png");
-  background-size: cover;
-  background-position: center;
+    linear-gradient(rgba(11, 79, 44, 0.72), rgba(11, 79, 44, 0.72)),
+    url("images/millys-bagels-photo.png") center / cover no-repeat;
   color: white;
-  padding: 6rem 0;
+  padding: 7rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .hero h1 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  opacity: 0.92;
 }
 
-/* Sections */
+.hero-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: white;
+  color: var(--green);
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-btn:hover {
+  background: var(--cream);
+  color: var(--green);
+}
+
+/* =========================================
+   SECTIONS
+   ========================================= */
 .section {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .section.alt {
-  background: #f1ece4;
+  background: var(--alt-bg);
 }
 
 .section h2 {
   font-family: "Playfair Display", serif;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--green);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 700px;
+  margin-bottom: 2.5rem;
 }
 
 .section-divider {
   width: 80px;
   height: 3px;
-  background-color: var(--green);
-  margin: 4rem auto;
+  background: var(--green);
+  margin: 0 auto;
   border-radius: 2px;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
-
-/* Menu */
+/* =========================================
+   MENU
+   ========================================= */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .menu-item h3 {
-  margin-bottom: .5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: var(--green);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
+.menu-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item ul li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--border);
+  font-size: 0.97rem;
+}
+
+.menu-item ul li:last-child {
+  border-bottom: none;
+}
+
+/* Sandwich list â€” name + description stacked */
+.sandwich-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0;
+}
+
+.sandwich-list li strong {
+  font-size: 1rem;
+}
+
+.sandwich-list li span {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+/* =========================================
+   CATERING
+   ========================================= */
 .catering-image {
   width: 100%;
   max-width: 900px;
   display: block;
   margin: 0 auto;
   border: 2px solid var(--green);
+  border-radius: 4px;
 }
 
 .catering-link {
   text-align: center;
   margin-top: 2rem;
-  font-size: 1.1rem;
-}
-
-.catering-link a {
-  color: var(--green);
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.catering-link a:hover {
-  opacity: 0.8;
-
 }
 
 .catering-link a {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--green);
+  padding: 0.8rem 1.8rem;
+  background: var(--green);
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s;
 }
 
 .catering-link a:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
-
+/* FAQ accordion */
 .catering-faq {
   max-width: 800px;
   margin: 3rem auto 0;
 }
 
 .catering-faq details {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border);
   padding: 1rem 0;
 }
 
@@ -173,6 +290,8 @@ nav a:hover {
   cursor: pointer;
   list-style: none;
   position: relative;
+  padding-right: 2rem;
+  user-select: none;
 }
 
 .catering-faq summary::-webkit-details-marker {
@@ -184,33 +303,108 @@ nav a:hover {
   position: absolute;
   right: 0;
   font-size: 1.25rem;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .catering-faq details[open] summary::after {
-  content: "–";
+  content: "â€“";
 }
 
 .catering-faq p {
-  margin: 0.75rem 0 0;
-  line-height: 1.6;
+  margin-top: 0.75rem;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
+/* =========================================
+   CONTACT
+   ========================================= */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
 
-/* Footer */
+.contact-list a {
+  color: var(--green);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 .site-footer {
   border-top: 2px solid var(--green);
   padding: 2rem 0;
   text-align: center;
   color: var(--muted);
+  font-size: 0.9rem;
 }
 
-/* Mobile */
+/* =========================================
+   MOBILE / RESPONSIVE
+   ========================================= */
 @media (max-width: 700px) {
-  nav {
+
+  /* Show hamburger, hide inline nav */
+  .nav-toggle {
+    display: flex;
+  }
+
+  #main-nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    border-bottom: 2px solid var(--green);
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #main-nav.open {
+    display: flex;
+  }
+
+  #main-nav a {
+    margin-left: 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+  }
+
+  #main-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .hero {
+    padding: 5rem 0;
   }
 
   .hero h1 {
     font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.85rem;
   }
 }
