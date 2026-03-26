@@ -1,51 +1,255 @@
-Milly's Bagels logo
-Menu Catering Contact Location
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Milly's Bagels — Denver's Sourdough Bagel Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Milly's Bagels — warm, inviting, old-timey sourdough bagels baked fresh daily in Denver. Catering available." />
 
-Delicious sourdough bagels in Denver
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/millys-bagels-favicon.png">
 
-Baked fresh daily with love — come grab yours.
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
 
-See Our Menu
-Menu Highlights
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-Artisan sourdough bagels with freshly whipped cream cheeses and select sandwiches made with the freshest ingredients.
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <img
+      src="images/millys-bagels-logo.png"
+      alt="Milly's Bagels logo"
+      class="logo"
+    />
 
-Sourdough Bagels
+    <nav id="main-nav">
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#contact">Contact</a>
+      <a href="#location">Location</a>
+    </nav>
 
-Everything
-Sesame
-Salt
-Cheddar jalapeño
-Blueberry cinnamon
-Plain
-Spreads & Whipped Cream Cheeses
+    <!-- Hamburger button (mobile only) -->
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
 
-Plain
-Veggie
-Scallion
-Lemon blueberry honey
-Breakfast Sandwiches
+<main>
 
-The Big Cheesy Egg frittata, bacon, cheddar, cream cheese
-Lenny's Lover Egg frittata, hot honey bacon, cheddar, avocado
-NYC's Best Smoked salmon, cream cheese, capers, onion, tomato, lemon, dill
-Catering is available now
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Delicious sourdough bagels in Denver</h1>
+      <p>Baked fresh daily with love — come grab yours.</p>
+      <a href="#menu" class="hero-btn">See Our Menu</a>
+    </div>
+  </section>
 
- Milly's Bagels catering menu
-Submit your catering order →
+  <!-- MENU -->
+  <section id="menu" class="section">
+    <div class="container">
+      <h2>Menu Highlights</h2>
+      <p class="section-subtitle">Artisan sourdough bagels with freshly whipped cream cheeses and select sandwiches made with the freshest ingredients.</p>
 
-What type of catering do you offer?
-Is there a minimum order?
-Do you accommodate dietary restrictions?
-Do you deliver?
-Do you require a deposit?
-Get in touch!
+      <div class="menu-grid">
 
-📸 @millysbagels on Instagram
-✉️ millysbagels@gmail.com
-📞 (314) 406-1604
-Location coming soon!
+        <div class="menu-item">
+          <h3>Sourdough Bagels</h3>
+          <ul>
+            <li>Everything</li>
+            <li>Sesame</li>
+            <li>Salt</li>
+            <li>Cheddar jalapeño</li>
+            <li>Blueberry cinnamon</li>
+            <li>Plain</li>
+          </ul>
+        </div>
 
-Stay tuned — we'll share our permanent home here when the time comes. Follow us on Instagram for the latest updates.
+        <div class="menu-item">
+          <h3>Spreads &amp; Whipped Cream Cheeses</h3>
+          <ul>
+            <li>Plain</li>
+            <li>Veggie</li>
+            <li>Scallion</li>
+            <li>Lemon blueberry honey</li>
+          </ul>
+        </div>
 
-© 2026 Milly's Bagels  ·  Denver, CO
+        <div class="menu-item">
+          <h3>Breakfast Sandwiches</h3>
+          <ul class="sandwich-list">
+            <li>
+              <strong>The Big Cheesy</strong>
+              <span>Egg frittata, bacon, cheddar, cream cheese</span>
+            </li>
+            <li>
+              <strong>Lenny's Lover</strong>
+              <span>Egg frittata, hot honey bacon, cheddar, avocado</span>
+            </li>
+            <li>
+              <strong>NYC's Best</strong>
+              <span>Smoked salmon, cream cheese, capers, onion, tomato, lemon, dill</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CATERING -->
+  <section id="catering" class="section alt">
+    <div class="container">
+      <h2>Catering is available now</h2>
+
+      
+        href="https://docs.google.com/forms/d/e/1FAIpQLSf6Te_qM2KXr3yvEgMOBHreU-Nq96njbVx-zox0889rWE-Juw/viewform"
+        target="_blank"
+        rel="noopener"
+        aria-label="View Milly's Bagels catering menu (opens Google Form)"
+      >
+        <img
+          src="images/millys-bagels-catering.png"
+          alt="Milly's Bagels catering menu"
+          class="catering-image"
+        />
+      </a>
+
+      <p class="catering-link">
+        
+          href="https://docs.google.com/forms/d/e/1FAIpQLSf6Te_qM2KXr3yvEgMOBHreU-Nq96njbVx-zox0889rWE-Juw/viewform"
+          target="_blank"
+          rel="noopener"
+        >
+          Submit your catering order →
+        </a>
+      </p>
+
+      <div class="catering-faq">
+        <details>
+          <summary>What type of catering do you offer?</summary>
+          <p>
+            We offer many types of catering! We can create platters with bagels sliced vertically "St. Louis style,"
+            which is great for sharing and tasting different types of bagels and cream cheeses. We can also create
+            individual bags with cream cheese. Just let us know what you're looking for and we'll be happy to accommodate.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is there a minimum order?</summary>
+          <p>Nope! We are happy to take orders of any size.</p>
+        </details>
+
+        <details>
+          <summary>Do you accommodate dietary restrictions?</summary>
+          <p>
+            Please let us know ahead of time about dietary restrictions. We will coordinate and confirm whether we
+            can accommodate your needs.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do you deliver?</summary>
+          <p>Yes, delivery in Denver is included with all catering orders.</p>
+        </details>
+
+        <details>
+          <summary>Do you require a deposit?</summary>
+          <p>
+            For the majority of orders, no deposit is required. Payment can be made ahead of time or at time of
+            delivery by card or check.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Get in touch!</h2>
+      <ul class="contact-list">
+        <li>
+          <a href="https://instagram.com/millysbagels" target="_blank" rel="noopener">
+            📸 @millysbagels on Instagram
+          </a>
+        </li>
+        <li>
+          <a href="mailto:millysbagels@gmail.com">
+            ✉️ millysbagels@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="tel:+13144061604">
+            📞 (314) 406-1604
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- LOCATION -->
+  <section id="location" class="section alt">
+    <div class="container">
+      <h2>Location coming soon!</h2>
+      <p>Stay tuned — we'll share our permanent home here when the time comes. Follow us on Instagram for the latest updates.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Milly's Bagels &nbsp;·&nbsp; Denver, CO</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  const toggle = document.getElementById("nav-toggle");
+  const nav = document.getElementById("main-nav");
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    toggle.classList.toggle("open", isOpen);
+    toggle.setAttribute("aria-expanded", isOpen);
+    toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  });
+
+  // Close nav when a link is clicked
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
+</script>
+
+</body>
+</html>
