@@ -1,9 +1,11 @@
 /* =========================================
-   MILLY'S BAGELS â€” styles.css
+   MILLY'S BAGELS - styles.css
    ========================================= */
 
 :root {
   --green: #0b4f2c;
+  --button-green: #2e7d32;
+  --button-green-hover: #1b5e20;
   --cream: #faf7f2;
   --alt-bg: #f1ece4;
   --text: #2b2b2b;
@@ -72,7 +74,7 @@ nav a:hover {
   opacity: 0.75;
 }
 
-/* Hamburger button â€” hidden on desktop */
+/* Hamburger button - hidden on desktop */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -96,7 +98,7 @@ nav a:hover {
   transform-origin: center;
 }
 
-/* Animate to âœ• when open */
+/* Animate to an X when open */
 .nav-toggle.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -154,6 +156,17 @@ nav a:hover {
 .hero-btn:hover {
   background: var(--cream);
   color: var(--green);
+}
+
+/* Green button (Order Now + Catering) */
+.btn-green {
+  background: var(--button-green);
+  color: #ffffff;
+}
+
+.btn-green:hover {
+  background: var(--button-green-hover);
+  color: #ffffff;
 }
 
 /* =========================================
@@ -223,7 +236,7 @@ nav a:hover {
   border-bottom: none;
 }
 
-/* Sandwich list â€” name + description stacked */
+/* Sandwich list - name + description stacked */
 .sandwich-list li {
   display: flex;
   flex-direction: column;
@@ -309,7 +322,7 @@ nav a:hover {
 }
 
 .catering-faq details[open] summary::after {
-  content: "â€“";
+  content: "\2013";
 }
 
 .catering-faq p {
